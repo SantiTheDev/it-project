@@ -25,7 +25,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'santithedev Docker Hub'
-        repository: 'santithedev/app-contable'
+        repository: 'santithedev/it-project'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |

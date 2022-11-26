@@ -30,7 +30,7 @@ resource "azurerm_resource_group" "DevOps_rg" {
   location = "eastus"
 }
 
-resource "azurerm_container_group" "appcg"{
+resource "azurerm_container_group" "appcg2"{
   name = "it-project-backend"
   location = azurerm_resource_group.DevOps_rg.location
   resource_group_name = azurerm_resource_group.DevOps_rg.name
