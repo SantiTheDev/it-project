@@ -16,4 +16,6 @@ RUN pip3 install gunicorn
 
 COPY . .
 
+EXPOSE 80
+
 CMD python manage.py makemigrations && python manage.py migrate && gunicorn web.wsgi:application --bind 0.0.0.0:80
