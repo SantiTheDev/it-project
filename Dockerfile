@@ -11,6 +11,9 @@ ENV PYTHONUNBUFFERED 1
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+# Installing dependencies
+RUN pip3 install gunicorn
+
 COPY . .
 
-CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:80
+CMD python manage.py makemigrations && python manage.py migrate && gunicorn web.wsgi:application --bind 0.0.0.0:80
