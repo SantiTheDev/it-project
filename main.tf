@@ -46,7 +46,7 @@ resource "azurerm_container_group" "appcg2"{
     memory = "1"
 
     ports {
-      port = "80"
+      port = "8000"
       protocol = "TCP"
     }
   }
